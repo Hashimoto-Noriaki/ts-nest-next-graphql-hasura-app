@@ -2,6 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
+import { ArticleResolver } from './articles/article.resolver';
 
 @Module({
   imports: [
@@ -12,5 +13,6 @@ import { join } from 'path';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'), //コードファーストで進める際にnest.jsから自動生成されるスキーマファイルの指定
     }),
   ],
+  providers: [ArticleResolver],
 })
 export class AppModule {}
