@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Article {
+  id: Int!
+  title: String!
+  url: String!
+  description: String!
+  tags: [String!]!
+  created_at: String!
+  updated_at: String!
+  deleted_at: String
+}
+
+type Query {
+  getArticles: [Article!]!
+}
+
+type Mutation {
+  addArticle(title: String!, url: String!, description: String!): Article!
+}
