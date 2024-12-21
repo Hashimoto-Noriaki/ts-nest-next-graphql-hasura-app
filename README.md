@@ -36,6 +36,7 @@ docker compose down
 ```
 $ npm run start:dev
 ```
+- http://localhost:4000/
 
 ### ESLint Prettier
 
