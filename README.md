@@ -1,8 +1,30 @@
-### 導入技術
+# docker起動
+- 起動
+```
+docker compose up -d
+```
+- 停止
+```
+docker compose down
+```
 
-### ORM
-- ```Prisma```
+# Next.js
+- サーバー起動
+```
+npm run dev
+```
 
+- GraphQLの確認
+```
+npm run dev
+```
+- サーバー
+http://localhost:3000
+
+### GraphQL
+http://localhost:3000/api/graphql
+
+# Nest.js
 
 ### Nest.jsの概念
 
@@ -21,18 +43,8 @@ nest g resolver article --no-spec
 
 https://docs.nestjs.com/
 
-### docker起動
-- 起動
-```
-docker compose up -d
-```
-- 停止
-```
-docker compose down
-```
 
 ### サーバー起動
-
 ```
 $ npm run start:dev
 ```
@@ -41,7 +53,6 @@ $ npm run start:dev
 ### ESLint Prettier
 
 - ESLint
-
 ```
 npx eslint . --fix
 ```
@@ -55,7 +66,7 @@ npx prettier --write .
 ### playgrondでQueryを実行
 サーバー実行
 
-- http://localhost:3000/graphql
+- http://localhost🕓000/graphql
 
 <img width="1440" alt="スクリーンショット 2024-11-03 13 19 23" src="https://github.com/user-attachments/assets/f5548496-bac8-4432-bbb1-c14aeb548c0d">
 
@@ -90,19 +101,3 @@ https://zenn.dev/rescuenow/articles/30135e098d8d87#%E8%83%8C%E6%99%AF
 ```
 docker exec -it ts-project-nest-next-graphql-hasura psql -U nori_user noridb 
 ```
-
-
-# Next.js
-- サーバー起動
-```
-npm run dev
-```
-
-- GraphQLの確認
-```
-npm run dev
-```
-記事の一覧取得
-http://localhost:3000/articles
-
-
