@@ -21,6 +21,12 @@ npm run dev
 - サーバー
 http://localhost:3000
 
+### storybook
+```
+npm run storybook
+```
+- http://localhost:6006
+
 ### GraphQL
 http://localhost:3000/api/graphql
 
