@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <ApolloProvider client={client}>
       <AppProvider>
         <Layout>
-        <GlobalStyle />
+          <GlobalStyle />
           <Component {...pageProps} />
         </Layout>
       </AppProvider>

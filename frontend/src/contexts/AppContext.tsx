@@ -1,13 +1,15 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type AppContextType = {
-    user: string | null;
-    setUser: (user: string | null) => void;
+  user: string | null;
+  setUser: (user: string | null) => void;
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const AppProvider: React.FC<{ children: ReactNode }> = ({
+  children
+}) => {
   const [user, setUser] = useState<string | null>(null);
 
   return (

@@ -7,7 +7,7 @@ const FooterWrapper = styled(Box)`
   left: 0;
   bottom: 0;
   width: 100vw;
-  background-color:#00bfff;
+  background-color: #00bfff;
   color: white;
   padding: 20px 10px;
   text-align: center;
