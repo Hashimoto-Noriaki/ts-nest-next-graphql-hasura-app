@@ -113,6 +113,19 @@ https://www.prisma.io/docs/orm/reference/prisma-schema-reference#model-field-sca
 npx prisma migrate dev --name init
 ```
 
+### 起動中のサーバーを止める
+[Nest] 42219  - 2024/12/27 0:33:49   ERROR [NestApplication] Error: listen EADDRINUSE: address already in use :::4000 +5ms
+```
+lsof -i :4000
+```
+```
+COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+node      12345  user   12u  IPv4 0x12345      0t0  TCP *:4000 (LISTEN)
+```
+```
+kill -9 12345
+```
+
 ### Hasura
 
 https://hasura.io/learn/ja/graphql/hasura/data-modeling/2-try-user-queries/
