@@ -21,6 +21,16 @@ npm run dev
 - サーバー
 http://localhost:3000
 
+### ESLint Prettier
+- ESLInt
+```
+npx next lint 
+```
+- Prettier
+```
+npx prettier --write .
+```
+
 ### storybook
 ```
 npm run storybook
