@@ -1,12 +1,11 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button,  Menu } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Menu } from '@mui/material';
 import { styled } from '@mui/system';
 
 // AppBarのスタイルをstyled-componentsで固定
 const StyledAppBar = styled(AppBar)`
   background-color: #00bfff !important;
 `;
-
 
 const StyledToolbar = styled(Toolbar)`
   justify-content: space-between;
@@ -42,9 +41,7 @@ const Header: React.FC = () => {
     <StyledAppBar position="static">
       <StyledToolbar>
         {/* ロゴ部分 */}
-        <Logo>
-          記事共有サイト
-        </Logo>
+        <Logo>記事共有サイト</Logo>
         {/* メニューボタン */}
         <div>
           <StyledButton onClick={handleMenuClick}>メニュー</StyledButton>
@@ -54,11 +51,11 @@ const Header: React.FC = () => {
             onClose={handleCloseMenu}
             anchorOrigin={{
               vertical: 'top',
-              horizontal: 'right',
+              horizontal: 'right'
             }}
             transformOrigin={{
               vertical: 'top',
-              horizontal: 'right',
+              horizontal: 'right'
             }}
           >
             {/* <MenuItem onClick={handleCloseMenu}>
