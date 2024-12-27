@@ -32,7 +32,7 @@ const Signup = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // サーバーへの送信処理をここで実装する
-    console.log(formData);
+    // console.log(formData);
   };
 
   return (
