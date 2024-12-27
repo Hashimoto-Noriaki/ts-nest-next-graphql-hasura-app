@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
+import { Container, TextField, Typography, Box } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
+import LoginButton from '../components/atoms/LoginButton';
 import Link from 'next/link';
 
 // 型定義
@@ -122,15 +123,8 @@ const Login = () => {
           onChange={handleInputChange}
         />
 
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          sx={{ mt: 3 }}
-        >
-          ログイン
-        </Button>
+        {/* atomsのLoginButtonを使用 */}
+        <LoginButton />
 
         {/* サインアップリンク */}
         <Typography
