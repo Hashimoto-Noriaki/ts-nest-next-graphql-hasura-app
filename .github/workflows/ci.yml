@@ -39,9 +39,11 @@ jobs:
       - name: Run ESLint for Nest.js
         run: |
           cd backend
+          npm install
           npx eslint . --fix
 
       - name: Run Prettier for Nest.js
         run: |
           cd backend
+          npm install
           npx prettier --write .
