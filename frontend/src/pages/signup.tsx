@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
+import { Container, TextField, Typography, Box } from '@mui/material';
+import SignupButton from '../components/atoms/SignupButton';
 import SchoolIcon from '@mui/icons-material/School';
 import Link from 'next/link';
 
@@ -122,17 +123,7 @@ const Signup = () => {
           onChange={handleInputChange}
           fullWidth
         />
-
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          sx={{ mt: 2 }}
-        >
-          新規登録
-        </Button>
-
+        <SignupButton />
         <Typography
           variant="body2"
           sx={{
