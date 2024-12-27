@@ -31,7 +31,7 @@ const Signup = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // サーバーへの送信処理をここで実装する
-    // console.log(formData);
+    console.log(formData);
   };
 
   return (
@@ -77,68 +77,78 @@ const Signup = () => {
         新規ユーザー登録
       </Typography>
 
+      {/* 名前フィールド */}
+      <Typography variant="body2" align="left" sx={{ width: '100%' }}>
+        名前
+      </Typography>
+      <TextField
+        variant="outlined"
+        name="name"
+        value={formData.name}
+        onChange={handleInputChange}
+        fullWidth
+      />
+
+      <Typography variant="body2" align="left" sx={{ width: '100%', mt: 2}}>
+        メールアドレス
+      </Typography>
+      <TextField
+        variant="outlined"
+        name="email"
+        value={formData.email}
+        onChange={handleInputChange}
+        fullWidth
+      />
+      <Typography variant="body2" align="left" sx={{ width: '100%',mt: 2 }}>
+        パスワード
+      </Typography>
+      <TextField
+        variant="outlined"
+        name="password"
+        type="password"
+        value={formData.password}
+        onChange={handleInputChange}
+        fullWidth
+      />
+      <Typography variant="body2" align="left" sx={{ width: '100%',mt: 2}}>
+        パスワード確認
+      </Typography> 
+      <TextField
+        variant="outlined"
+        name="password_confirmation"
+        type="password"
+        value={formData.password_confirmation}
+        onChange={handleInputChange}
+        fullWidth
+      />
       <Box
         component="form"
         onSubmit={handleSubmit}
         sx={{
-          width: '100%', // フォーム全体の幅
-          maxWidth: '600px', // スマートな幅制限
+          width: '100%',
+          maxWidth: '600px',
           display: 'flex',
           flexDirection: 'column',
-          gap: 2,
-          mt: 4
+          gap: 2
         }}
       >
-        <TextField
-          label="名前"
-          variant="outlined"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          fullWidth
-        />
-        <TextField
-          label="メールアドレス"
-          variant="outlined"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          fullWidth
-        />
-        <TextField
-          label="パスワード"
-          variant="outlined"
-          name="password"
-          type="password"
-          value={formData.password}
-          onChange={handleInputChange}
-          fullWidth
-        />
-        <TextField
-          label="パスワード確認"
-          variant="outlined"
-          name="password_confirmation"
-          type="password"
-          value={formData.password_confirmation}
-          onChange={handleInputChange}
-          fullWidth
-        />
         <SignupButton />
-        <Typography
-          variant="body2"
-          sx={{
-            mt: 2,
-            textAlign: 'center',
-            color: 'blue',
-            textDecoration: 'underline',
-            cursor: 'pointer'
-          }}
-        >
-          <Link href="/login" passHref>
-            既にアカウントをお持ちですか？ ログインはこちら
-          </Link>
-        </Typography>
       </Box>
+
+      <Typography
+        variant="body2"
+        sx={{
+          mt: 2,
+          textAlign: 'center',
+          color: 'blue',
+          textDecoration: 'underline',
+          cursor: 'pointer'
+        }}
+      >
+        <Link href="/login" passHref>
+          既にアカウントをお持ちですか？ ログインはこちら
+        </Link>
+      </Typography>
     </Container>
   );
 };
