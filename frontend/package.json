@@ -36,8 +36,8 @@
     "@storybook/preset-react-webpack": "^8.4.7",
     "@storybook/react": "^8.4.7",
     "@storybook/test": "^8.4.7",
-    "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/node": "^20.17.10",
+    "@types/react": "^19.0.2",
     "@types/react-dom": "^19",
     "@types/styled-components": "^5.1.34",
     "babel-plugin-styled-components": "^2.1.4",
@@ -48,7 +48,7 @@
     "eslint-plugin-storybook": "^0.11.1",
     "prettier": "^3.4.2",
     "storybook": "^8.4.7",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   },
   "eslintConfig": {
     "extends": [
