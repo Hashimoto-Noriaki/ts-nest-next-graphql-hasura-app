@@ -22,11 +22,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-
-      - name: Install dependencies (Next.js + Nest.js)
-        run: |
-          npm install
-
       # Next.js の Lint と Prettier を実行
       - name: Run ESLint for Next.js
         run: |
