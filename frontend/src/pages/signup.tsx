@@ -90,10 +90,11 @@ const Signup = () => {
         onSubmit={handleSubmit}
         sx={{
           width: '100%', // フォーム全体の幅
-          maxWidth: '400px', // スマートな幅制限
+          maxWidth: '600px', // スマートな幅制限
           display: 'flex',
           flexDirection: 'column',
-          gap: 2, // 項目間のスペースを統一
+          gap: 2,
+          mt: 4,
         }}
       >
         <TextField
