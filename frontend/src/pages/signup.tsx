@@ -18,14 +18,14 @@ const Signup = () => {
     name: '',
     email: '',
     password: '',
-    password_confirmation: '',
+    password_confirmation: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: value
     }));
   };
 
@@ -45,7 +45,7 @@ const Signup = () => {
         mb: 1,
         justifyContent: 'center',
         minHeight: '50vh',
-        padding: '2rem',
+        padding: '2rem'
       }}
     >
       <Box
@@ -54,7 +54,7 @@ const Signup = () => {
           justifyContent: 'center',
           alignItems: 'center',
           mb: 1,
-          textAlign: 'center',
+          textAlign: 'center'
         }}
       >
         <SchoolIcon sx={{ fontSize: '3rem', mr: 1 }} />
@@ -63,7 +63,7 @@ const Signup = () => {
           sx={{
             whiteSpace: 'nowrap',
             overflow: 'hidden',
-            textOverflow: 'ellipsis',
+            textOverflow: 'ellipsis'
           }}
         >
           学習者、エンジニアのために記事の共有をしよう
@@ -91,10 +91,10 @@ const Signup = () => {
           textAlign: 'center',
           color: 'blue',
           textDecoration: 'underline',
-          cursor: 'pointer',
+          cursor: 'pointer'
         }}
       >
-        <Link href="/login"  passHref >
+        <Link href="/login" passHref>
           既にアカウントをお持ちですか？ ログインはこちら
         </Link>
       </Typography>
