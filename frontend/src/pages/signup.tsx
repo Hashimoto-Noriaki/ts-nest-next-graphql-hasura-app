@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Container, TextField, Typography, Box } from '@mui/material';
-import SignupButton from '../components/atoms/SignupButton';
+import { Container, Typography, Box } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import Link from 'next/link';
+import SignupButton from '../components/atoms/SignupButton';
+import SignupForm from '../components/molecules/SignupForm';
 
 // 型定義
 interface SignupForm {
@@ -17,14 +18,14 @@ const Signup = () => {
     name: '',
     email: '',
     password: '',
-    password_confirmation: ''
+    password_confirmation: '',
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -43,8 +44,8 @@ const Signup = () => {
         alignItems: 'center',
         mb: 1,
         justifyContent: 'center',
-        minHeight: '50vh', // ページ全体の中央に配置
-        padding: '2rem'
+        minHeight: '50vh',
+        padding: '2rem',
       }}
     >
       <Box
@@ -52,8 +53,8 @@ const Signup = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          mb: 3,
-          textAlign: 'center'
+          mb: 1,
+          textAlign: 'center',
         }}
       >
         <SchoolIcon sx={{ fontSize: '3rem', mr: 1 }} />
@@ -62,7 +63,7 @@ const Signup = () => {
           sx={{
             whiteSpace: 'nowrap',
             overflow: 'hidden',
-            textOverflow: 'ellipsis'
+            textOverflow: 'ellipsis',
           }}
         >
           学習者、エンジニアのために記事の共有をしよう
@@ -77,64 +78,12 @@ const Signup = () => {
         新規ユーザー登録
       </Typography>
 
-      {/* 名前フィールド */}
-      <Typography variant="body2" align="left" sx={{ width: '100%' }}>
-        名前
-      </Typography>
-      <TextField
-        variant="outlined"
-        name="name"
-        value={formData.name}
-        onChange={handleInputChange}
-        fullWidth
-      />
-
-      <Typography variant="body2" align="left" sx={{ width: '100%', mt: 2}}>
-        メールアドレス
-      </Typography>
-      <TextField
-        variant="outlined"
-        name="email"
-        value={formData.email}
-        onChange={handleInputChange}
-        fullWidth
-      />
-      <Typography variant="body2" align="left" sx={{ width: '100%',mt: 2 }}>
-        パスワード
-      </Typography>
-      <TextField
-        variant="outlined"
-        name="password"
-        type="password"
-        value={formData.password}
-        onChange={handleInputChange}
-        fullWidth
-      />
-      <Typography variant="body2" align="left" sx={{ width: '100%',mt: 2}}>
-        パスワード確認
-      </Typography> 
-      <TextField
-        variant="outlined"
-        name="password_confirmation"
-        type="password"
-        value={formData.password_confirmation}
-        onChange={handleInputChange}
-        fullWidth
-      />
-      <Box
-        component="form"
+      <SignupForm
+        formData={formData}
+        onInputChange={handleInputChange}
         onSubmit={handleSubmit}
-        sx={{
-          width: '100%',
-          maxWidth: '600px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 2
-        }}
-      >
-        <SignupButton />
-      </Box>
-
+      />
+      <SignupButton />
       <Typography
         variant="body2"
         sx={{
@@ -142,10 +91,10 @@ const Signup = () => {
           textAlign: 'center',
           color: 'blue',
           textDecoration: 'underline',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
       >
-        <Link href="/login" passHref>
+        <Link href="/login"  passHref >
           既にアカウントをお持ちですか？ ログインはこちら
         </Link>
       </Typography>
