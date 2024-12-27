@@ -26,7 +26,7 @@ jobs:
       - name: Run ESLint for Next.js
         run: |
           cd frontend
-          npx next lint || exit 1
+          npx next lint
 
       - name: Run Prettier for Next.js
         run: |
