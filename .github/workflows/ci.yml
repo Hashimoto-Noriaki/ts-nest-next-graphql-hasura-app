@@ -1,0 +1,50 @@
+name: Lint and Prettier
+
+on:
+  push:
+    branches:
+      - master
+      - 'develop'
+  pull_request:
+    branches:
+      - master
+      - 'develop'
+
+jobs:
+  lint_and_format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies (Next.js + Nest.js)
+        run: |
+          npm install
+
+      # Next.js の Lint と Prettier を実行
+      - name: Run ESLint for Next.js
+        run: |
+          cd frontend
+          npx next lint || exit 1
+
+      - name: Run Prettier for Next.js
+        run: |
+          cd frontend
+          npx prettier --write . || exit 1
+
+      # Nest.js の Lint と Prettier を実行
+      - name: Run ESLint for Nest.js
+        run: |
+          cd backend
+          npx eslint . --fix || exit 1
+
+      - name: Run Prettier for Nest.js
+        run: |
+          cd backend
+          npx prettier --write . || exit 1
