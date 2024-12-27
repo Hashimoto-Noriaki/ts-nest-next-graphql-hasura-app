@@ -12,7 +12,11 @@ interface SignupFormProps {
   onSubmit: (e: React.FormEvent) => void;
 }
 
-const SignupForm: React.FC<SignupFormProps> = ({ formData, onInputChange, onSubmit }) => {
+const SignupForm: React.FC<SignupFormProps> = ({
+  formData,
+  onInputChange,
+  onSubmit
+}) => {
   return (
     <Box
       component="form"
@@ -23,7 +27,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ formData, onInputChange, onSubm
         display: 'flex',
         flexDirection: 'column',
         gap: 1,
-        mt: 1,
+        mt: 1
       }}
     >
       <Typography variant="body2" align="left" sx={{ width: '100%' }}>
