@@ -34,7 +34,7 @@ const Signup = () => {
   };
 
   return (
-    <Container 
+    <Container
       maxWidth="sm"
       sx={{
         display: 'flex',
@@ -43,7 +43,7 @@ const Signup = () => {
         mb: 1,
         justifyContent: 'center',
         minHeight: '50vh', // ページ全体の中央に配置
-        padding: '2rem',
+        padding: '2rem'
       }}
     >
       <Box
@@ -52,7 +52,7 @@ const Signup = () => {
           justifyContent: 'center',
           alignItems: 'center',
           mb: 3,
-          textAlign: 'center',
+          textAlign: 'center'
         }}
       >
         <SchoolIcon sx={{ fontSize: '3rem', mr: 1 }} />
@@ -61,27 +61,18 @@ const Signup = () => {
           sx={{
             whiteSpace: 'nowrap',
             overflow: 'hidden',
-            textOverflow: 'ellipsis',
+            textOverflow: 'ellipsis'
           }}
         >
           学習者、エンジニアのために記事の共有をしよう
         </Typography>
       </Box>
 
-      <Typography
-        variant="body2"
-        align="center"
-        sx={{ mb: 3 }}
-      >
+      <Typography variant="body2" align="center" sx={{ mb: 3 }}>
         新しくユーザ登録すると、あなたの作成した記事、お気に入りの記事がみんなに共有できるようになります。
       </Typography>
 
-      <Typography
-        variant="h5"
-        component="h3"
-        align="center"
-        sx={{ mb: 3 }}
-      >
+      <Typography variant="h5" component="h3" align="center" sx={{ mb: 3 }}>
         新規ユーザー登録
       </Typography>
 
@@ -94,7 +85,7 @@ const Signup = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: 2,
-          mt: 4,
+          mt: 4
         }}
       >
         <TextField
@@ -149,7 +140,7 @@ const Signup = () => {
             textAlign: 'center',
             color: 'blue',
             textDecoration: 'underline',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
         >
           <Link href="/login" passHref>
