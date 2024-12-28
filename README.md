@@ -31,6 +31,11 @@ npx next lint
 npx prettier --write .
 ```
 
+### Next.jsのバージョン確認
+```
+npx next --version
+```
+
 ### storybook
 ```
 npm run storybook
