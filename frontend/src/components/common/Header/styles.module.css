@@ -1,0 +1,49 @@
+.header {
+  background-color: #00bfff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  display: none; /* デフォルトでは非表示 */
+}
+
+.menuOpen {
+  display: block;
+}
+
+.menuItem {
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #f0f0f0;
+}
