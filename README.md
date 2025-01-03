@@ -1,14 +1,16 @@
 # 技術構成
-Next.js
-Nest.js
-TypeScript
-GraphQL
-ESLint
-Prettier
-CSS Modules
-Storybook
-GitHub Actions
-
+- Next.js
+- Nest.js
+- TypeScript
+- GraphQL
+- ESLint
+- Prettier
+- CSS Modules
+- Storybook
+- GitHub Actions
+- Docker
+- ReactNative(導入予定)
+- Hasura(導入予定)
 
 ### docker起動
 - 起動
