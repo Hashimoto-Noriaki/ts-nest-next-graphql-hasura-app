@@ -7,6 +7,7 @@
 - Prettier
 - CSS Modules
 - Storybook
+- Prisma
 - GitHub Actions
 - Docker
 - ReactNative(導入予定)
