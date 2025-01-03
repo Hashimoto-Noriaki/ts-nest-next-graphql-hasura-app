@@ -59,11 +59,11 @@ npm run storybook
 ### GraphQL
 http://localhost:3000/api/graphql
 
-### UI
-- ```MUI```
+###　CSS Module
+メンテナンスを考慮
 
-### CSS IN JS
-- ```styled-components```
+### MUI CSS in JS
+1度利用したが、採用しないことにする。
 
 # Nest.js
 
