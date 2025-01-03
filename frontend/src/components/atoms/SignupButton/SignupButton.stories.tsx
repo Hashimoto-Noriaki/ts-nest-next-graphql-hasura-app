@@ -1,8 +1,6 @@
-// src/components/SignupButton.stories.tsx
-
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import SignupButton from './SignupButton';
+import SignupButton from '.';
 
 // ストーリーブックのMeta情報を設定
 export default {

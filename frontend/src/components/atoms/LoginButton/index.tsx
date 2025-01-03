@@ -1,5 +1,5 @@
-import { Button } from '@mui/material';
 import React from 'react';
+import styles from './styles.module.css';
 
 interface LoginButtonProps {
   onClick?: () => void;
@@ -7,16 +7,10 @@ interface LoginButtonProps {
 
 const LoginButton: React.FC<LoginButtonProps> = ({ onClick }) => {
   return (
-    <Button
-      type="submit"
-      variant="contained"
-      color="primary"
-      fullWidth
-      onClick={onClick}
-      sx={{ mt: 3 }}
-    >
+    <button className={styles.button} onClick={onClick} type="submit">
       ログイン
-    </Button>
+    </button>
   );
 };
+
 export default LoginButton;
