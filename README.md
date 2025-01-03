@@ -1,4 +1,4 @@
-# 技術構成
+## 技術構成
 - Next.js
 - Nest.js
 - TypeScript
