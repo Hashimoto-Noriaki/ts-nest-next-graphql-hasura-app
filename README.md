@@ -1,3 +1,15 @@
+# 技術構成
+Next.js
+Nest.js
+TypeScript
+GraphQL
+ESLint
+Prettier
+CSS Modules
+Storybook
+GitHub Actions
+
+
 ### docker起動
 - 起動
 ```
