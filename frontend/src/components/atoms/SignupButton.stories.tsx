@@ -6,18 +6,20 @@ import SignupButton from './SignupButton';
 
 // ストーリーブックのMeta情報を設定
 export default {
-  title: 'Components/SignupButton',  // Storybook内での表示名
-  component: SignupButton,          // 表示するコンポーネント
+  title: 'Components/SignupButton', // Storybook内での表示名
+  component: SignupButton, // 表示するコンポーネント
   argTypes: {
-    onClick: { action: 'clicked' },  // クリックアクションをStorybookでトラッキング
-  },
+    onClick: { action: 'clicked' } // クリックアクションをStorybookでトラッキング
+  }
 } as Meta;
 
 // Storyの定義
-const Template: StoryFn<typeof SignupButton> = (args) => <SignupButton {...args} />;
+const Template: StoryFn<typeof SignupButton> = (args) => (
+  <SignupButton {...args} />
+);
 // const Template: StoryFn<typeof LoginButton> = (args) => (
 // コンポーネントの例
 export const Default = Template.bind({});
 Default.args = {
-  onClick: () => console.log('新規登録ボタンがクリックされました'),
+  onClick: () => console.log('新規登録ボタンがクリックされました')
 };
