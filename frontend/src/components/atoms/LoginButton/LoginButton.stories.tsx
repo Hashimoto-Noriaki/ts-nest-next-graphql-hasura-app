@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import LoginButton from './LoginButton';
+import LoginButton from '.';
 
 export default {
   title: 'Components/LoginButton',

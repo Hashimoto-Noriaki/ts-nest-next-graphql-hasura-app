@@ -1,5 +1,5 @@
-import { Button } from '@mui/material';
 import React from 'react';
+import styles from './styles.module.css';
 
 interface SignupButtonProps {
   onClick?: () => void;
@@ -7,16 +7,10 @@ interface SignupButtonProps {
 
 const SignupButton: React.FC<SignupButtonProps> = ({ onClick }) => {
   return (
-    <Button
-      type="submit"
-      variant="contained"
-      color="success"
-      fullWidth
-      sx={{ mt: 2 }}
-      onClick={onClick}
-    >
+    <button className={styles.button} onClick={onClick} type="submit">
       新規登録
-    </Button>
+    </button>
   );
 };
+
 export default SignupButton;
